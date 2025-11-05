@@ -1,0 +1,14 @@
+u asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+[root@ip-172-31-5-47 sun]# git pull origin master
+From https://github.com/karthikk0724/new-sun-repo
+ * branch            master     -> FETCH_HEAD
+Updating 29e8e8d..2fadc9f
+Fast-forward
+ empfile.xlsx | Bin 0 -> 9426 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 empfile.xlsx
+[root@ip-172-31-5-47 sun]# git branch
+  feature1
+* master
