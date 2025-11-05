@@ -1,0 +1,122 @@
+String Comparisons: -
+[ string ] : true if string is not null
+[ -z string ] : True if string is empty
+[ String1 = string2 ] : true both the strings are equal
+[ string1 != String2 ] : true if they are not equal
+[ -n string ] true if string is not empty (this  is default operation)
+[ string > string2 ] ture if string1 sorts after string2
+[ string1 < string2 ] true if string1 sorts before string2
+
+str1=Alfha;
+str2=Bravo
+str3=
+[ $str1 = $str2 ]  ===> this is false as both are not equal strings
+[ $str1 != $str2 ] ===> This is true 
+[ $str3 ] ==> This is false as str3 is null
+[ -n $Str1 ] ==> True because str1 is not empty
+[ $str1 ] ==> True becuasestr1 is not empty (same as above, -n is default )
+[ -z $str3 ] ==> True as str3 is empty
+
+[$str1 < $str2 ] ==> true as Alfha comes before to Bravo when  sorted
+[$str1 > $str2 ] ==> false as Alfha comes before to Bravo when  sorted
+
+Arrays in Bash Shell Script:-
+
+An array is a variable containing multiple values may be of same type or of different type.  There is no maximum limit to the size of an array, nor any requirement that member variables be indexed or assigned contiguously. Array index starts with zero.
+
+Declaring an Array and Assigning values:-
+---------------------------------------
+In bash, array is created automatically when a variable is used in the format like,
+name[index]=value
+	?name is any name for an array
+index could be any number or expression that must evaluate to a number greater than or equal to zero.You can declare an explicit array using :
+	declare -a arrayname.
+To access an element from an array use curly brackets like ${name[index]}.
+See the below shell script:
+$ cat prg42.sh
+#! /bin/bash
+Unix[0]='Debian'
+Unix[1]='Red hat'
+Unix[2]='Ubuntu'
+Unix[3]='Suse'
+
+echo ${Unix[1]}
+
+$./prg42.sh
+Red hat
+
+
+Initializing an array during declaration:
+----------------------------------------
+Instead of initializing an each element of an array separately, you can declare and initialize an array by specifying the list of elements (separated by white space) with in a curly braces.
+Syntax:
+declare -a arrayname=(element1 element2 element3)
+
+If the elements has the white space character, enclose it with in a quotes.
+
+Print the Whole Bash Array:-
+---------------------------
+There are different ways to print the whole elements of the array. If the index number is @ or *, all members of an array are referenced. You can traverse through the array elements and print it, using looping statements in bash.
+
+echo ${Unix[@]}
+
+Referring to the content of a member variable of an array without providing an index number is the same as referring to the content of the first element, the one referenced with index number zero.
+Example:-
+   echo ${Unix[0]} is same as ${Unix}
+
+
+Odd or Even
+Add, subtract, multiply and divide
+Leap year
+Factorial
+HCF and LCM
+ncR and nPr
+Swapping
+Reverse number
+Palindrome number
+Print Pattern
+Diamond
+Prime numbers
+Find armstrong number
+Generate armstrong number
+Fibonacci series 
+Print floyd's triangle
+Print pascal triangle
+Addition using pointers
+Maximum element in array
+Minimum element in array
+Linear search
+Binary search
+Reverse array
+Insertelement in array
+Delete element from array
+Merge arrays
+Bubble sort
+Insertion sort
+Selection sort
+String length
+Compare strings
+Copy string
+Concatenate strings
+Remove spaces
+Change case
+Read file
+Copy files
+Merge two files
+List files in a directory
+Delete file
+Compute sum of all digits in a given number
+Print contents of file from given line number to next given number of lines.
+PrintGood morning/Afternoon/Evening as you log in to system based on the system time
+Find whether entered year is Leap or not
+Compute the average of given numbers on command line args
+Implement Basic math Calculator (case statement)
+Convert decimal number to hexadecimal number
+Calcule factorial of given number
+Find  whether given file exist?
+Digital clock using shell script
+Script to convert file names from UPPERCASE to lowercase file names or vice versa. 
+Sort the given array (in asending or in descending and both)
+Find given number exist in the given array list
+Generate Fibonacci series with upper limit provided
+
